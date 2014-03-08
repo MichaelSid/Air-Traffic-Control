@@ -8,14 +8,13 @@ class Plane
 		@landed
 	end
 
-	# def land
-	# 	@landed = true
-	# end
+	def grounded
+		@landed = true
+	end
 
-	# def fly
-	# 	@landed = false
-	# end
-
+	def flying
+		@landed = false
+	end
 
 
 
