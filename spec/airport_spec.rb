@@ -17,8 +17,9 @@ describe Airport do
 	it "should know when the weather is stormy or sunny" do
 		plane = Plane.new
 		airport = Airport.new
-		weather = double("Weather", :weather_report => "stormy")
-		expect(weather.weather_report(plane)).to eq("stormy")
+		# using double and stubbing to stop the random return of the weather:
+		weather = double("weather", :weather_report => @stormy = false)
+		expect(weather.weather_report(plane)).to be_false
 	end
 
 
@@ -35,7 +36,6 @@ describe Airport do
 		airport.storm
 		expect(airport.release?(plane)).to be_false
 	end
-
 
 
 
