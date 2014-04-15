@@ -1,29 +1,35 @@
+require 'weather'
 class Airport
+
+attr_reader :capacity
+
+	def initialize(weather)
+		@capacity ||= 20
+		@planes = []
+		@weather = weather
+	end
+
+	def plane_count
+		@planes.count
+	end
 
 
 	def accept?(plane)
-		return false if stormy?
-		true
+		raise "we are full, sorry!" if full?
+		raise "wait until the skies clear, m'dear!" if @weather.stormy?
+		plane.landed
+		@planes << plane
 	end
 
 	def release?(plane)
-		return false if stormy?
-		true
+		raise "wait until the skies clear, m'dear!" if @weather.stormy? 
+		plane.flying
+		@planes.pop
 	end
 
-	def stormy?
-		@stormy
+	def full?
+		capacity <= plane_count
 	end
-
-	def storm
-		@stormy = true
-	end
-
-	def weather_report(plane)
-    case rand(100)
-      when  1...80 then @stormy = true
-      when 81...100 then @stormy = false
-    end
-  end
 
 end
+
