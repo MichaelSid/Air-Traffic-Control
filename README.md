@@ -4,8 +4,8 @@ Air-Traffic-Control
 This was a Week 3 test at Makers Academy that was assigned by @schadchnev.
 
 We had to create software for an air traffic controller at an airport. Planes can land and take off from the airport provided that: 
-*The weather conditions are good.
-*The airport is not at full capacity (only for landing).
+* The weather conditions are good.
+* The airport is not at full capacity (only for landing).
 
 For this test we used:
 
