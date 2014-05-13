@@ -9,15 +9,15 @@ We had to create software for an air traffic controller at an airport. Planes ca
 
 For this test we used:
 
-1.Ruby
-+ Git
-+ Object-oriented-programming
-+ Test-driven-development with RSpec
+1. Ruby
+2. Git
+3. Object-oriented-programming
+4. Test-driven-development with RSpec
 
 Essentially the aim of this test was to write clean and readable code using TDD and OOP. I created 3 separate classes with their own specific and limited responsibilities:
 
   Class   | Responsibility
   -------------  | -------------
-  *Plane* | Can land or take off from an Airport, if clear to do so.
+  Plane | Can land or take off from an Airport, if clear to do so.
   Airport   | Has a maximum capacity, gets its weather from the Weather class, can allow planes to take off or land.
   Weather   | Can randomly switch state between sunny or stormy.
