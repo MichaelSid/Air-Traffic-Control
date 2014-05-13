@@ -1,7 +1,7 @@
 Air-Traffic-Control
 ===================
 
-This was a Week 3 test at Makers Academy that was assigned by @schadchnev.
+This was a test at Makers Academy that was assigned to us in Week 3.
 
 We had to create software for an air traffic controller at an airport. Planes can land and take off from the airport provided that: 
 * The weather conditions are good.
